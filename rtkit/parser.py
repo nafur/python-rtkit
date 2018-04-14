@@ -1,9 +1,11 @@
 try:
     from itertools import filterfalse as ifilterfalse
-    from cStringIO import StringIO
 except ImportError:
     from itertools import ifilterfalse
+try:
     from io import StringIO
+except ImportError:
+    from cStringIO import StringIO
 import re
 from rtkit import comment
 
